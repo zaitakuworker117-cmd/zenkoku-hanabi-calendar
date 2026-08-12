@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>全国花火カレンダー</title>
+
+  <meta name="description"
+        content="全国の花火大会を日付から探せる花火カレンダー。">
+
+  <meta name="theme-color" content="#020617">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="brand">🎆 全国花火カレンダー</div>
+</header>
+
+<main>
+
+  <!-- ==================== -->
+  <!-- カレンダー画面 -->
+  <!-- ==================== -->
+
+  <section id="calendarView" class="view active">
+
+    <div class="month-nav">
+      <button id="prevMonth">‹</button>
+
+      <h1 id="monthTitle"></h1>
+
+      <button id="nextMonth">›</button>
+    </div>
+
+    <div class="today-row">
+      <button id="todayBtn">
+        今日に戻る
+      </button>
+    </div>
+
+    <div class="weekdays">
+      <span>日</span>
+      <span>月</span>
+      <span>火</span>
+      <span>水</span>
+      <span>木</span>
+      <span>金</span>
+      <span>土</span>
+    </div>
+
+    <div id="calendar" class="calendar"></div>
+
+    <div class="quick-actions">
+
+      <button id="todayList">
+        🎆 今日の花火
+      </button>
+
+      <button id="areaSearch">
+        📍 地域から探す
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================== -->
+  <!-- 日別一覧画面 -->
+  <!-- ==================== -->
+
+  <section id="dayView" class="view">
+
+    <button class="back" data-back="calendarView">
+      ← カレンダー
+    </button>
+
+    <div class="day-head">
+
+      <h1 id="dayTitle"></h1>
+
+      <span id="dayCount"></span>
+
+    </div>
+
+    <div id="areaFilters" class="chips"></div>
+
+    <div id="dayList" class="cards"></div>
+
+  </section>
+
+
+  <!-- ==================== -->
+  <!-- 詳細画面 -->
+  <!-- ==================== -->
+
+  <section id="detailView" class="view">
+
+    <button class="back" data-back="dayView">
+      ← 一覧へ
+    </button>
+
+    <div id="detail"></div>
+
+  </section>
+
+</main>
+
+
+<!-- ==================== -->
+<!-- 下部メニュー -->
+<!-- ==================== -->
+
+<nav class="bottom-nav">
+
+  <button data-nav="calendarView">
+    📅
+    <small>カレンダー</small>
+  </button>
+
+  <button id="navToday">
+    🎆
+    <small>今日</small>
+  </button>
+
+</nav>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
