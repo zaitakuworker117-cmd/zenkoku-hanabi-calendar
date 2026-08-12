@@ -1,0 +1,622 @@
+:root {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Sans",
+    "Yu Gothic",
+    sans-serif;
+
+  color: #f9fafb;
+  background: #050816;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #050816;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 72px;
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(2, 6, 23, 0.72),
+      rgba(2, 6, 23, 0.88)
+    ),
+    url("assets/fireworks-bg.jpg");
+
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  background: rgba(2, 6, 23, 0.82);
+
+  backdrop-filter: blur(12px);
+
+  color: white;
+
+  padding: 14px 16px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+
+/* =========================
+   メイン
+========================= */
+
+main {
+  max-width: 720px;
+  margin: auto;
+  padding: 14px;
+}
+
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+}
+
+
+/* =========================
+   月移動
+========================= */
+
+.month-nav {
+  display: grid;
+
+  grid-template-columns:
+    44px
+    1fr
+    44px;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+.month-nav h1 {
+  font-size: 20px;
+
+  margin:
+    12px
+    0;
+}
+
+.month-nav button,
+.back,
+.today-row button {
+
+  border:
+    1px solid
+    rgba(255,255,255,0.12);
+
+  background:
+    rgba(11,18,38,0.88);
+
+  color: white;
+
+  border-radius: 12px;
+
+  padding: 10px;
+
+  font-size: 20px;
+
+  box-shadow:
+    0 4px 18px
+    rgba(0,0,0,0.35);
+}
+
+
+/* =========================
+   今日ボタン
+========================= */
+
+.today-row {
+  text-align: right;
+
+  margin-bottom: 10px;
+}
+
+.today-row button {
+  font-size: 13px;
+}
+
+
+/* =========================
+   曜日
+========================= */
+
+.weekdays,
+.calendar {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap: 5px;
+}
+
+.weekdays {
+
+  font-size: 12px;
+
+  text-align: center;
+
+  color: #cbd5e1;
+
+  margin-bottom: 5px;
+}
+
+
+/* =========================
+   カレンダー
+========================= */
+
+.calendar .empty {
+  min-height: 66px;
+}
+
+.day {
+
+  min-height: 66px;
+
+  background:
+    rgba(7,17,38,0.88);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  color: white;
+
+  border-radius: 12px;
+
+  padding: 7px;
+
+  text-align: left;
+
+  box-shadow:
+    0 3px 12px
+    rgba(0,0,0,0.3);
+
+  position: relative;
+}
+
+.day.today {
+
+  outline:
+    2px solid
+    #fb7185;
+}
+
+.day.has-event {
+
+  background:
+    rgba(59,23,38,0.94);
+}
+
+.day .num {
+
+  font-weight: 700;
+}
+
+.count {
+
+  display: inline-block;
+
+  margin-top: 7px;
+
+  font-size: 11px;
+
+  background: #fb7185;
+
+  color: white;
+
+  border-radius: 20px;
+
+  padding:
+    3px 6px;
+}
+
+
+/* =========================
+   クイックボタン
+========================= */
+
+.quick-actions {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 10px;
+
+  margin-top: 14px;
+}
+
+.quick-actions button {
+
+  border:
+    1px solid
+    rgba(255,255,255,0.1);
+
+  background:
+    rgba(7,17,38,0.9);
+
+  color: white;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 4px 18px
+    rgba(0,0,0,0.35);
+}
+
+
+/* =========================
+   戻るボタン
+========================= */
+
+.back {
+
+  font-size: 14px;
+
+  margin:
+    5px
+    0
+    12px;
+}
+
+
+/* =========================
+   日別一覧
+========================= */
+
+.day-head {
+
+  display: flex;
+
+  align-items: end;
+
+  justify-content:
+    space-between;
+}
+
+.day-head h1 {
+
+  font-size: 22px;
+}
+
+.day-head span {
+
+  color: #cbd5e1;
+}
+
+
+/* =========================
+   地域フィルター
+========================= */
+
+.chips {
+
+  display: flex;
+
+  gap: 7px;
+
+  overflow-x: auto;
+
+  padding:
+    4px
+    0
+    12px;
+}
+
+.chips button {
+
+  white-space: nowrap;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.15);
+
+  background:
+    rgba(7,17,38,0.9);
+
+  color: white;
+
+  border-radius: 999px;
+
+  padding:
+    8px
+    12px;
+}
+
+.chips button.active {
+
+  background: #fb7185;
+
+  color: white;
+
+  border-color: #fb7185;
+}
+
+
+/* =========================
+   花火カード
+========================= */
+
+.card {
+
+  background:
+    rgba(7,17,38,0.94);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.1);
+
+  color: white;
+
+  border-radius: 16px;
+
+  padding: 15px;
+
+  margin: 10px 0;
+
+  box-shadow:
+    0 5px 20px
+    rgba(0,0,0,0.4);
+}
+
+.card h2 {
+
+  font-size: 17px;
+
+  margin:
+    0
+    0
+    8px;
+}
+
+.meta {
+
+  color: #cbd5e1;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.card button {
+
+  width: 100%;
+
+  margin-top: 10px;
+
+  border: 0;
+
+  background: #fb7185;
+
+  color: white;
+
+  padding: 11px;
+
+  border-radius: 10px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   詳細画面
+========================= */
+
+.detail-hero {
+
+  background:
+    rgba(7,17,38,0.95);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.1);
+
+  color: white;
+
+  border-radius: 20px;
+
+  padding: 22px;
+
+  margin-top: 8px;
+
+  box-shadow:
+    0 5px 24px
+    rgba(0,0,0,0.45);
+}
+
+.detail-hero .emoji {
+
+  font-size: 52px;
+}
+
+.detail-hero h1 {
+
+  font-size: 24px;
+
+  margin:
+    10px
+    0
+    18px;
+}
+
+.info {
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.1);
+
+  padding: 13px 0;
+
+  color: #e5e7eb;
+}
+
+.info b {
+
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: white;
+}
+
+
+/* =========================
+   地図エリア
+========================= */
+
+.map {
+
+  height: 180px;
+
+  background: #111827;
+
+  border-radius: 14px;
+
+  display: grid;
+
+  place-items: center;
+
+  margin: 12px 0;
+
+  color: #9ca3af;
+}
+
+
+/* =========================
+   公式サイトボタン
+========================= */
+
+.official {
+
+  display: block;
+
+  text-align: center;
+
+  background: #fb7185;
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 13px;
+
+  border-radius: 12px;
+
+  margin-top: 15px;
+}
+
+
+/* =========================
+   下部ナビ
+========================= */
+
+.bottom-nav {
+
+  position: fixed;
+
+  bottom: 0;
+
+  left: 0;
+
+  right: 0;
+
+  background:
+    rgba(2,6,23,0.94);
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.1);
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 80px;
+
+  padding:
+    8px
+    env(safe-area-inset-right)
+    calc(
+      8px +
+      env(safe-area-inset-bottom)
+    );
+
+  z-index: 20;
+
+  backdrop-filter: blur(12px);
+}
+
+.bottom-nav button {
+
+  border: 0;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 20px;
+}
+
+.bottom-nav small {
+
+  display: block;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   PC表示
+========================= */
+
+@media (min-width: 700px) {
+
+  .bottom-nav {
+    display: none;
+  }
+
+  .topbar {
+    position: static;
+  }
+}
