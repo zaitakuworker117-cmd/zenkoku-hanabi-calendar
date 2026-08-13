@@ -178,3 +178,30 @@ footer {
 .back-button:hover {
   text-decoration: underline;
 }
+
+.official-site {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.official-button {
+  display: inline-block;
+
+  padding: 13px 22px;
+
+  background: #ff6b35;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+
+  transition: opacity 0.2s;
+}
+
+.official-button:hover {
+  opacity: 0.8;
+}
