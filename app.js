@@ -416,6 +416,28 @@ if (detailContainer) {
           </strong>
         </div>
 
+        ${firework.officialUrl ? `
+
+  <div class="official-site">
+
+    <a
+
+      href="${firework.officialUrl}"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+
+      class="official-button">
+
+      🔗 公式サイトを見る →
+
+    </a>
+
+  </div>
+
+` : ""}
+
       </div>
 
     `;
