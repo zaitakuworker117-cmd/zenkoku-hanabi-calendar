@@ -1,656 +1,214 @@
-const events = [
+const fireworks = [
   {
-    id: 1,
-    date: "2026-08-08",
-    pref: "大阪府",
-    name: "なにわ夏祭り花火大会（サンプル）",
-    city: "大阪市",
-    time: "19:30〜20:30",
-    shots: "約8,000発",
-    url: "https://example.com/"
+    name: "十和田市夏まつり花火大会",
+    date: "2026-08-14",
+    prefecture: "青森県",
+    location: "十和田市陸上競技場周辺",
+    time: "19:00〜",
+    fireworks: "約2,500発"
   },
   {
-    id: 2,
-    date: "2026-08-08",
-    pref: "兵庫県",
-    name: "神戸港サマーフェス花火（サンプル）",
-    city: "神戸市",
-    time: "20:00〜20:30",
-    shots: "約6,000発",
-    url: "https://example.com/"
+    name: "大間町ブルーマリンフェスティバル2026 花火大会",
+    date: "2026-08-14",
+    prefecture: "青森県",
+    location: "大間港",
+    time: "未定",
+    fireworks: "未定"
   },
   {
-    id: 3,
-    date: "2026-08-08",
-    pref: "京都府",
-    name: "鴨川納涼花火（サンプル）",
-    city: "京都市",
-    time: "19:45〜20:30",
-    shots: "約5,000発",
-    url: "https://example.com/"
+    name: "第22回 男鹿日本海花火",
+    date: "2026-08-14",
+    prefecture: "秋田県",
+    location: "船川港OGAマリンパーク",
+    time: "未定",
+    fireworks: "約10,000発"
   },
   {
-    id: 4,
-    date: "2026-08-09",
-    pref: "大阪府",
-    name: "淀川サンデー花火（サンプル）",
-    city: "大阪市",
-    time: "19:30〜20:15",
-    shots: "約7,000発",
-    url: "https://example.com/"
+    name: "山形大花火大会",
+    date: "2026-08-14",
+    prefecture: "山形県",
+    location: "霞城公園周辺",
+    time: "未定",
+    fireworks: "約7,000発"
   },
   {
-    id: 5,
-    date: "2026-08-09",
-    pref: "滋賀県",
-    name: "びわ湖夏花火（サンプル）",
-    city: "大津市",
-    time: "19:30〜20:30",
-    shots: "約10,000発",
-    url: "https://example.com/"
+    name: "太地町花火大会",
+    date: "2026-08-14",
+    prefecture: "和歌山県",
+    location: "太地漁港",
+    time: "20:00〜",
+    fireworks: "約1,000発"
   },
+
   {
-    id: 6,
+    name: "木更津港まつり花火大会",
     date: "2026-08-15",
-    pref: "大阪府",
-    name: "大阪ベイ花火大会（サンプル）",
-    city: "大阪市",
-    time: "19:30〜20:30",
-    shots: "約10,000発",
-    url: "https://example.com/"
+    prefecture: "千葉県",
+    location: "木更津港周辺",
+    time: "未定",
+    fireworks: "約14,000発"
   },
   {
-    id: 7,
+    name: "赤川花火大会",
     date: "2026-08-15",
-    pref: "兵庫県",
-    name: "○○納涼花火大会（サンプル）",
-    city: "○○市",
-    time: "20:00〜21:00",
-    shots: "約5,000発",
-    url: "https://example.com/"
+    prefecture: "山形県",
+    location: "赤川河畔",
+    time: "19:15〜",
+    fireworks: "約12,000発"
   },
   {
-    id: 8,
+    name: "諏訪湖祭湖上花火大会",
     date: "2026-08-15",
-    pref: "東京都",
-    name: "東京湾花火大会（サンプル）",
-    city: "東京都",
-    time: "19:00〜20:00",
-    shots: "約12,000発",
-    url: "https://example.com/"
+    prefecture: "長野県",
+    location: "諏訪湖",
+    time: "未定",
+    fireworks: "約40,000発"
   },
   {
-    id: 9,
+    name: "第21回越前市サマーフェスティバル花火大会",
+    date: "2026-08-15",
+    prefecture: "福井県",
+    location: "越前市",
+    time: "未定",
+    fireworks: "約15,000発"
+  },
+  {
+    name: "福山夏まつり あしだ川花火大会",
+    date: "2026-08-15",
+    prefecture: "広島県",
+    location: "芦田川大橋上流",
+    time: "未定",
+    fireworks: "約16,000発"
+  },
+  {
+    name: "八幡浜みなと花火大会",
+    date: "2026-08-15",
+    prefecture: "愛媛県",
+    location: "八幡浜港",
+    time: "未定",
+    fireworks: "約3,500発"
+  },
+  {
+    name: "刈谷わんさか祭り 花火大会",
+    date: "2026-08-15",
+    prefecture: "愛知県",
+    location: "刈谷市総合運動公園",
+    time: "未定",
+    fireworks: "約7,000発"
+  },
+
+  {
+    name: "敦賀とうろう流しと大花火大会",
     date: "2026-08-16",
-    pref: "京都府",
-    name: "古都夏夜花火（サンプル）",
-    city: "京都市",
-    time: "19:30〜20:20",
-    shots: "約4,000発",
-    url: "https://example.com/"
+    prefecture: "福井県",
+    location: "敦賀湾",
+    time: "未定",
+    fireworks: "約10,000発"
   },
   {
-    id: 10,
+    name: "川内川花火大会",
+    date: "2026-08-16",
+    prefecture: "鹿児島県",
+    location: "川内川河川敷",
+    time: "未定",
+    fireworks: "約10,000発"
+  },
+  {
+    name: "大石田まつり 花火大会",
+    date: "2026-08-16",
+    prefecture: "山形県",
+    location: "大石田町",
+    time: "未定",
+    fireworks: "約3,000発"
+  },
+  {
+    name: "浅川の花火",
+    date: "2026-08-16",
+    prefecture: "福島県",
+    location: "浅川町",
+    time: "未定",
+    fireworks: "約3,300発"
+  },
+  {
+    name: "宮津燈籠流し花火大会",
+    date: "2026-08-16",
+    prefecture: "京都府",
+    location: "宮津湾",
+    time: "未定",
+    fireworks: "約3,000発"
+  },
+
+  {
+    name: "第61回 函館湯の川温泉花火大会",
     date: "2026-08-22",
-    pref: "大阪府",
-    name: "大阪リバー花火（サンプル）",
-    city: "大阪市",
-    time: "19:30〜20:30",
-    shots: "約9,000発",
-    url: "https://example.com/"
+    prefecture: "北海道",
+    location: "松倉川下流",
+    time: "未定",
+    fireworks: "約3,000発"
+  },
+  {
+    name: "第32回 ひたちなか祭り花火大会",
+    date: "2026-08-22",
+    prefecture: "茨城県",
+    location: "陸上自衛隊勝田駐屯地",
+    time: "未定",
+    fireworks: "約3,000発"
+  },
+  {
+    name: "朝来市山東夏祭り",
+    date: "2026-08-22",
+    prefecture: "兵庫県",
+    location: "小谷与布土川左岸",
+    time: "未定",
+    fireworks: "約1,400発"
+  },
+  {
+    name: "第98回 全国花火競技大会「大曲の花火」",
+    date: "2026-08-29",
+    prefecture: "秋田県",
+    location: "大仙市大曲雄物川河畔",
+    time: "17:15〜",
+    fireworks: "約18,000発"
   }
 ];
 
+const container = document.getElementById("fireworks-list");
 
-let current = new Date(2026, 7, 8);
+function displayFireworks(list) {
+  container.innerHTML = "";
 
-let selectedDate = "2026-08-08";
-
-let area = "全国";
-
-
-const views = [
-  "calendarView",
-  "dayView",
-  "detailView"
-];
-
-
-const $ = (id) => {
-  return document.getElementById(id);
-};
-
-
-const iso = (date) => {
-
-  return (
-    date.getFullYear() +
-    "-" +
-    String(date.getMonth() + 1).padStart(2, "0") +
-    "-" +
-    String(date.getDate()).padStart(2, "0")
-  );
-
-};
-
-
-const fmt = (dateString) => {
-
-  const d =
-    new Date(dateString + "T00:00:00");
-
-  const week =
-    "日月火水木金土"[d.getDay()];
-
-  return (
-    `${d.getFullYear()}年` +
-    `${d.getMonth() + 1}月` +
-    `${d.getDate()}日` +
-    `（${week}）`
-  );
-
-};
-
-
-function show(id) {
-
-  views.forEach((view) => {
-
-    $(view).classList.toggle(
-      "active",
-      view === id
-    );
-
-  });
-
-  window.scrollTo(0, 0);
-
-}
-
-
-/* =========================
-   カレンダー表示
-========================= */
-
-function renderCalendar() {
-
-  $("monthTitle").textContent =
-    `${current.getFullYear()}年` +
-    `${current.getMonth() + 1}月`;
-
-
-  const first =
-    new Date(
-      current.getFullYear(),
-      current.getMonth(),
-      1
-    );
-
-
-  const last =
-    new Date(
-      current.getFullYear(),
-      current.getMonth() + 1,
-      0
-    );
-
-
-  let html = "";
-
-
-  for (
-    let i = 0;
-    i < first.getDay();
-    i++
-  ) {
-
-    html +=
-      '<div class="empty"></div>';
-
+  if (list.length === 0) {
+    container.innerHTML = "<p>該当する花火大会がありません。</p>";
+    return;
   }
 
+  list.forEach(firework => {
+    const card = document.createElement("div");
 
-  for (
-    let n = 1;
-    n <= last.getDate();
-    n++
-  ) {
+    card.className = "firework-card";
 
-    const date =
-      new Date(
-        current.getFullYear(),
-        current.getMonth(),
-        n
-      );
-
-
-    const key = iso(date);
-
-
-    const list =
-      events.filter(
-        (event) =>
-          event.date === key
-      );
-
-
-    const today =
-      key === "2026-08-08"
-        ? " today"
-        : "";
-
-
-    html += `
-      <button
-        class="day${today}${list.length ? " has-event" : ""}"
-        data-date="${key}"
-      >
-
-        <span class="num">
-          ${n}
-        </span>
-
-        ${
-          list.length
-            ? `<br>
-               <span class="count">
-                 🎆 ${list.length}
-               </span>`
-            : ""
-        }
-
-      </button>
+    card.innerHTML = `
+      <h2>${firework.name}</h2>
+      <p>📅 ${firework.date}</p>
+      <p>📍 ${firework.prefecture} ${firework.location}</p>
+      <p>🕐 ${firework.time}</p>
+      <p>🎆 ${firework.fireworks}</p>
     `;
 
-  }
-
-
-  $("calendar").innerHTML = html;
-
-
-  document
-    .querySelectorAll(".day")
-    .forEach((button) => {
-
-      button.onclick = () => {
-
-        openDay(
-          button.dataset.date
-        );
-
-      };
-
-    });
-
+    container.appendChild(card);
+  });
 }
 
-
-/* =========================
-   日別一覧
-========================= */
-
-function openDay(date) {
-
-  selectedDate = date;
-
-  area = "全国";
-
-  renderDay();
-
-  show("dayView");
-
-}
-
-
-function renderDay() {
-
-  const list =
-    events.filter(
-      (event) =>
-        event.date === selectedDate
-    );
-
-
-  const prefs = [
-    "全国",
-    ...new Set(
-      list.map(
-        (event) =>
-          event.pref
-      )
-    )
-  ];
-
-
-  $("dayTitle").textContent =
-    `🎆 ${fmt(selectedDate)}`;
-
-
-  $("dayCount").textContent =
-    `${list.length}件`;
-
-
-  $("areaFilters").innerHTML =
-    prefs
-      .map(
-        (pref) => `
-          <button
-            class="${
-              pref === area
-                ? "active"
-                : ""
-            }"
-            data-pref="${pref}"
-          >
-            ${pref}
-          </button>
-        `
-      )
-      .join("");
-
-
-  document
-    .querySelectorAll(
-      "#areaFilters button"
-    )
-    .forEach((button) => {
-
-      button.onclick = () => {
-
-        area =
-          button.dataset.pref;
-
-        renderDay();
-
-      };
-
-    });
-
-
-  const filtered =
-    area === "全国"
-      ? list
-      : list.filter(
-          (event) =>
-            event.pref === area
-        );
-
-
-  if (filtered.length === 0) {
-
-    $("dayList").innerHTML =
-      "<p>この条件の花火大会はありません。</p>";
-
-    return;
-
-  }
-
-
-  $("dayList").innerHTML =
-    filtered
-      .map(
-        (event) => `
-
-          <article class="card">
-
-            <h2>
-              🎆 ${event.name}
-            </h2>
-
-            <div class="meta">
-
-              📍
-              ${event.pref}
-              ${event.city}
-
-              <br>
-
-              🕐
-              ${event.time}
-
-              <br>
-
-              🎇
-              ${event.shots}
-
-            </div>
-
-            <button
-              data-id="${event.id}"
-            >
-              詳細を見る
-            </button>
-
-          </article>
-
-        `
-      )
-      .join("");
-
-
-  document
-    .querySelectorAll(
-      "#dayList button"
-    )
-    .forEach((button) => {
-
-      button.onclick = () => {
-
-        openDetail(
-          Number(
-            button.dataset.id
-          )
-        );
-
-      };
-
-    });
-
-}
-
-
-/* =========================
-   詳細画面
-========================= */
-
-function openDetail(id) {
-
-  const event =
-    events.find(
-      (item) =>
-        item.id === id
-    );
-
-
-  if (!event) {
-
-    return;
-
-  }
-
-
-  $("detail").innerHTML = `
-
-    <div class="detail-hero">
-
-      <div class="emoji">
-        🎆
-      </div>
-
-      <h1>
-        ${event.name}
-      </h1>
-
-
-      <div class="info">
-
-        <b>
-          📅 開催日
-        </b>
-
-        ${fmt(event.date)}
-
-      </div>
-
-
-      <div class="info">
-
-        <b>
-          🕐 開催時間
-        </b>
-
-        ${event.time}
-
-      </div>
-
-
-      <div class="info">
-
-        <b>
-          📍 開催場所
-        </b>
-
-        ${event.pref}
-        ${event.city}
-
-      </div>
-
-
-      <div class="info">
-
-        <b>
-          🎇 打ち上げ数
-        </b>
-
-        ${event.shots}
-
-      </div>
-
-
-      <div class="map">
-
-        🗺 地図
-
-        <br>
-
-        （次版でGoogle Maps等と連携）
-
-      </div>
-
-
-      <div class="info">
-
-        <b>
-          ⚠️ 開催情報
-        </b>
-
-        荒天時は延期・中止になる場合があります。
-
-        最新情報は公式サイトをご確認ください。
-
-      </div>
-
-
-      <a
-        class="official"
-        href="${event.url}"
-        target="_blank"
-        rel="noopener"
-      >
-
-        🔗 公式サイトを見る
-
-      </a>
-
-    </div>
-
-  `;
-
-
-  show("detailView");
-
-}
-
-
-/* =========================
-   ボタン
-========================= */
-
-$("prevMonth").onclick = () => {
-
-  current.setMonth(
-    current.getMonth() - 1
-  );
-
-  renderCalendar();
-
-};
-
-
-$("nextMonth").onclick = () => {
-
-  current.setMonth(
-    current.getMonth() + 1
-  );
-
-  renderCalendar();
-
-};
-
-
-$("todayBtn").onclick = () => {
-
-  current =
-    new Date(2026, 7, 8);
-
-  renderCalendar();
-
-};
-
-
-$("todayList").onclick = () => {
-
-  openDay("2026-08-08");
-
-};
-
-
-$("navToday").onclick = () => {
-
-  openDay("2026-08-08");
-
-};
-
-
-document
-  .querySelectorAll(".back")
-  .forEach((button) => {
-
-    button.onclick = () => {
-
-      show(
-        button.dataset.back
-      );
-
-    };
-
+function filterFireworks() {
+  const prefecture =
+    document.getElementById("prefecture-filter").value;
+
+  const filtered = fireworks.filter(firework => {
+    return prefecture === "すべて" ||
+           firework.prefecture === prefecture;
   });
 
+  displayFireworks(filtered);
+}
 
-document
-  .querySelectorAll("[data-nav]")
-  .forEach((button) => {
-
-    button.onclick = () => {
-
-      show(
-        button.dataset.nav
-      );
-
-    };
-
-  });
-
-
-/* =========================
-   初期表示
+displayFireworks(fireworks);
