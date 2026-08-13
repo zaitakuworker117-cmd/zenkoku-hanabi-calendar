@@ -1,136 +1,90 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>全国花火カレンダー</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="全国の花火大会を日付から探せる花火カレンダー。">
-
-  <meta name="theme-color" content="#020617">
+  <title>2026 全国花火大会カレンダー</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="topbar">
-  <div class="brand">🎆 全国花火カレンダー</div>
-</header>
+  <header>
+    <h1>🎆 全国花火大会カレンダー</h1>
+    <p>2026年の花火大会を探そう！</p>
+  </header>
 
-<main>
+  <main>
 
-  <!-- ==================== -->
-  <!-- カレンダー画面 -->
-  <!-- ==================== -->
+    <section class="search-box">
 
-  <section id="calendarView" class="view active">
+      <label for="prefecture-filter">
+        都道府県から探す
+      </label>
 
-    <div class="month-nav">
-      <button id="prevMonth">‹</button>
+      <select id="prefecture-filter"
+              onchange="filterFireworks()">
 
-      <h1 id="monthTitle"></h1>
+        <option value="すべて">すべて</option>
 
-      <button id="nextMonth">›</button>
-    </div>
+        <option value="北海道">北海道</option>
+        <option value="青森県">青森県</option>
+        <option value="岩手県">岩手県</option>
+        <option value="宮城県">宮城県</option>
+        <option value="秋田県">秋田県</option>
+        <option value="山形県">山形県</option>
+        <option value="福島県">福島県</option>
 
-    <div class="today-row">
-      <button id="todayBtn">
-        今日に戻る
-      </button>
-    </div>
+        <option value="茨城県">茨城県</option>
+        <option value="千葉県">千葉県</option>
 
-    <div class="weekdays">
-      <span>日</span>
-      <span>月</span>
-      <span>火</span>
-      <span>水</span>
-      <span>木</span>
-      <span>金</span>
-      <span>土</span>
-    </div>
+        <option value="福井県">福井県</option>
+        <option value="長野県">長野県</option>
+        <option value="愛知県">愛知県</option>
+        <option value="京都府">京都府</option>
+        <option value="大阪府">大阪府</option>
+        <option value="兵庫県">兵庫県</option>
+        <option value="和歌山県">和歌山県</option>
 
-    <div id="calendar" class="calendar"></div>
+        <option value="広島県">広島県</option>
+        <option value="愛媛県">愛媛県</option>
 
-    <div class="quick-actions">
+        <option value="鹿児島県">鹿児島県</option>
 
-      <button id="todayList">
-        🎆 今日の花火
-      </button>
+      </select>
 
-      <button id="areaSearch">
-        📍 地域から探す
-      </button>
+    </section>
 
-    </div>
+    <section>
 
-  </section>
+      <h2 class="section-title">
+        🎇 これから開催される花火大会
+      </h2>
 
+      <div id="fireworks-list"></div>
 
-  <!-- ==================== -->
-  <!-- 日別一覧画面 -->
-  <!-- ==================== -->
+    </section>
 
-  <section id="dayView" class="view">
+  </main>
 
-    <button class="back" data-back="calendarView">
-      ← カレンダー
-    </button>
+  <footer>
+    <p>
+      ※開催日時・内容は変更される場合があります。
+      お出かけ前に公式情報をご確認ください。
+    </p>
 
-    <div class="day-head">
+    <p>
+      © 2026 全国花火大会カレンダー
+    </p>
+  </footer>
 
-      <h1 id="dayTitle"></h1>
-
-      <span id="dayCount"></span>
-
-    </div>
-
-    <div id="areaFilters" class="chips"></div>
-
-    <div id="dayList" class="cards"></div>
-
-  </section>
-
-
-  <!-- ==================== -->
-  <!-- 詳細画面 -->
-  <!-- ==================== -->
-
-  <section id="detailView" class="view">
-
-    <button class="back" data-back="dayView">
-      ← 一覧へ
-    </button>
-
-    <div id="detail"></div>
-
-  </section>
-
-</main>
-
-
-<!-- ==================== -->
-<!-- 下部メニュー -->
-<!-- ==================== -->
-
-<nav class="bottom-nav">
-
-  <button data-nav="calendarView">
-    📅
-    <small>カレンダー</small>
-  </button>
-
-  <button id="navToday">
-    🎆
-    <small>今日</small>
-  </button>
-
-</nav>
-
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 
 </body>
+
 </html>
