@@ -187,13 +187,22 @@ function displayFireworks(list) {
 
     card.className = "firework-card";
 
-    card.innerHTML = `
-      <h2>${firework.name}</h2>
-      <p>📅 ${firework.date}</p>
-      <p>📍 ${firework.prefecture} ${firework.location}</p>
-      <p>🕐 ${firework.time}</p>
-      <p>🎆 ${firework.fireworks}</p>
-    `;
+card.innerHTML = `
+  <h2>${firework.name}</h2>
+
+  <p>📅 ${firework.date}</p>
+
+  <p>📍 ${firework.prefecture} ${firework.location}</p>
+
+  <p>🕐 ${firework.time}</p>
+
+  <p>🎆 ${firework.fireworks}</p>
+
+  <a href="detail.html?id=${fireworks.indexOf(firework)}"
+     class="detail-button">
+     詳細を見る →
+  </a>
+`;
 
     container.appendChild(card);
   });
@@ -212,3 +221,82 @@ function filterFireworks() {
 }
 
 displayFireworks(fireworks);
+
+// 詳細ページの表示
+const detailContainer =
+  document.getElementById("firework-detail");
+
+if (detailContainer) {
+
+  const params =
+    new URLSearchParams(window.location.search);
+
+  const id =
+    Number(params.get("id"));
+
+  const firework =
+    fireworks[id];
+
+  if (firework) {
+
+    detailContainer.innerHTML = `
+
+      <div class="detail-card">
+
+        <h2>${firework.name}</h2>
+
+        <div class="detail-item">
+          <span>📅 開催日</span>
+          <strong>${firework.date}</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>📍 開催場所</span>
+          <strong>
+            ${firework.prefecture}
+            ${firework.location}
+          </strong>
+        </div>
+
+        <div class="detail-item">
+          <span>🕐 開催時間</span>
+          <strong>${firework.time}</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>🎆 打ち上げ数</span>
+          <strong>${firework.fireworks}</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>🚗 アクセス</span>
+          <strong>詳細情報を確認中</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>🎫 有料席</span>
+          <strong>詳細情報を確認中</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>🌧️ 雨天時</span>
+          <strong>公式情報をご確認ください</strong>
+        </div>
+
+      </div>
+
+    `;
+
+  } else {
+
+    detailContainer.innerHTML = `
+      <div class="detail-card">
+        <h2>花火大会が見つかりません</h2>
+        <p>
+          指定された花火大会の情報が見つかりませんでした。
+        </p>
+      </div>
+    `;
+
+  }
+}
