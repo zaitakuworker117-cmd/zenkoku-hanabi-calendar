@@ -8,14 +8,6 @@ const fireworks = [
     fireworks: "約2,500発"
   },
   {
-    name: "大間町ブルーマリンフェスティバル2026 花火大会",
-    date: "2026-08-14",
-    prefecture: "青森県",
-    location: "大間港",
-    time: "未定",
-    fireworks: "未定"
-  },
-  {
     name: "第22回 男鹿日本海花火",
     date: "2026-08-14",
     prefecture: "秋田県",
@@ -23,23 +15,6 @@ const fireworks = [
     time: "未定",
     fireworks: "約10,000発"
   },
-  {
-    name: "山形大花火大会",
-    date: "2026-08-14",
-    prefecture: "山形県",
-    location: "霞城公園周辺",
-    time: "未定",
-    fireworks: "約7,000発"
-  },
-  {
-    name: "太地町花火大会",
-    date: "2026-08-14",
-    prefecture: "和歌山県",
-    location: "太地漁港",
-    time: "20:00〜",
-    fireworks: "約1,000発"
-  },
-
   {
     name: "木更津港まつり花火大会",
     date: "2026-08-15",
@@ -65,14 +40,6 @@ const fireworks = [
     fireworks: "約40,000発"
   },
   {
-    name: "第21回越前市サマーフェスティバル花火大会",
-    date: "2026-08-15",
-    prefecture: "福井県",
-    location: "越前市",
-    time: "未定",
-    fireworks: "約15,000発"
-  },
-  {
     name: "福山夏まつり あしだ川花火大会",
     date: "2026-08-15",
     prefecture: "広島県",
@@ -88,15 +55,6 @@ const fireworks = [
     time: "未定",
     fireworks: "約3,500発"
   },
-  {
-    name: "刈谷わんさか祭り 花火大会",
-    date: "2026-08-15",
-    prefecture: "愛知県",
-    location: "刈谷市総合運動公園",
-    time: "未定",
-    fireworks: "約7,000発"
-  },
-
   {
     name: "敦賀とうろう流しと大花火大会",
     date: "2026-08-16",
@@ -114,22 +72,6 @@ const fireworks = [
     fireworks: "約10,000発"
   },
   {
-    name: "大石田まつり 花火大会",
-    date: "2026-08-16",
-    prefecture: "山形県",
-    location: "大石田町",
-    time: "未定",
-    fireworks: "約3,000発"
-  },
-  {
-    name: "浅川の花火",
-    date: "2026-08-16",
-    prefecture: "福島県",
-    location: "浅川町",
-    time: "未定",
-    fireworks: "約3,300発"
-  },
-  {
     name: "宮津燈籠流し花火大会",
     date: "2026-08-16",
     prefecture: "京都府",
@@ -137,7 +79,6 @@ const fireworks = [
     time: "未定",
     fireworks: "約3,000発"
   },
-
   {
     name: "第61回 函館湯の川温泉花火大会",
     date: "2026-08-22",
@@ -175,54 +116,77 @@ const fireworks = [
 const container = document.getElementById("fireworks-list");
 
 function displayFireworks(list) {
-  container.innerHTML = "";
 
-  if (list.length === 0) {
-    container.innerHTML = "<p>該当する花火大会がありません。</p>";
+  if (!container) {
     return;
   }
 
-  list.forEach(firework => {
+  container.innerHTML = "";
+
+  if (list.length === 0) {
+    container.innerHTML =
+      "<p>該当する花火大会がありません。</p>";
+    return;
+  }
+
+  list.forEach((firework, index) => {
+
     const card = document.createElement("div");
 
     card.className = "firework-card";
 
-card.innerHTML = `
-  <h2>${firework.name}</h2>
+    card.innerHTML = `
+      <h2>${firework.name}</h2>
 
-  <p>📅 ${firework.date}</p>
+      <p>📅 ${firework.date}</p>
 
-  <p>📍 ${firework.prefecture} ${firework.location}</p>
+      <p>📍 ${firework.prefecture} ${firework.location}</p>
 
-  <p>🕐 ${firework.time}</p>
+      <p>🕐 ${firework.time}</p>
 
-  <p>🎆 ${firework.fireworks}</p>
+      <p>🎆 ${firework.fireworks}</p>
 
-  <a href="detail.html?id=${fireworks.indexOf(firework)}"
-     class="detail-button">
-     詳細を見る →
-  </a>
-`;
+      <a
+        href="detail.html?id=${index}"
+        class="detail-button">
+        詳細を見る →
+      </a>
+    `;
 
     container.appendChild(card);
   });
 }
 
 function filterFireworks() {
-  const prefecture =
-    document.getElementById("prefecture-filter").value;
+
+  const select =
+    document.getElementById("prefecture-filter");
+
+  if (!select) {
+    return;
+  }
+
+  const prefecture = select.value;
 
   const filtered = fireworks.filter(firework => {
+
     return prefecture === "すべて" ||
            firework.prefecture === prefecture;
+
   });
 
   displayFireworks(filtered);
 }
 
+
+// 一覧ページ
 displayFireworks(fireworks);
 
-// 詳細ページの表示
+
+// ==========================
+// 詳細ページ
+// ==========================
+
 const detailContainer =
   document.getElementById("firework-detail");
 
@@ -284,7 +248,6 @@ if (detailContainer) {
         </div>
 
       </div>
-
     `;
 
   } else {
@@ -292,9 +255,7 @@ if (detailContainer) {
     detailContainer.innerHTML = `
       <div class="detail-card">
         <h2>花火大会が見つかりません</h2>
-        <p>
-          指定された花火大会の情報が見つかりませんでした。
-        </p>
+        <p>指定された花火大会の情報が見つかりませんでした。</p>
       </div>
     `;
 
