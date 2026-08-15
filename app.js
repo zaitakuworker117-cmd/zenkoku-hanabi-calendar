@@ -371,10 +371,32 @@ if (detailContainer) {
   const id =
     parseInt(params.get("id"), 10);
 
-  const firework =
+const firework =
     fireworks[id];
 
   if (firework) {
+
+    // ================================
+    // SEO設定
+    // ================================
+
+    document.title =
+      `${firework.name}｜${firework.date}｜全国花火大会カレンダー`;
+
+    const metaDescription =
+      document.getElementById("meta-description");
+
+    if (metaDescription) {
+
+      metaDescription.setAttribute(
+        "content",
+        `${firework.name}の2026年開催情報。` +
+        `開催日は${firework.date}、` +
+        `会場は${firework.prefecture}${firework.location}。` +
+        `打ち上げ数、アクセス、駐車場、有料席、公式サイトなどの詳細情報を掲載しています。`
+      );
+
+    }
 
     detailContainer.innerHTML = `
 
