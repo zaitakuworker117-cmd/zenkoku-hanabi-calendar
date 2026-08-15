@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/sitemap.xml
