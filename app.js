@@ -295,32 +295,35 @@ function displayFireworks(list) {
 
   container.innerHTML = "";
 
-  list.forEach((firework, index) => {
+list.forEach((firework) => {
 
-    const card = document.createElement("div");
+  const card = document.createElement("div");
 
-    card.className = "firework-card";
+  card.className = "firework-card";
 
-    card.innerHTML = `
-      <h2>${firework.name}</h2>
+  // 元のfireworks配列での位置を取得
+  const originalIndex = fireworks.indexOf(firework);
 
-      <p>📅 ${firework.date}</p>
+  card.innerHTML = `
+    <h2>${firework.name}</h2>
 
-      <p>📍 ${firework.prefecture} ${firework.location}</p>
+    <p>📅 ${firework.date}</p>
 
-      <p>🕐 ${firework.time}</p>
+    <p>📍 ${firework.prefecture} ${firework.location}</p>
 
-      <p>🎆 ${firework.fireworks}</p>
+    <p>🕐 ${firework.time}</p>
 
-      <a
-        href="detail.html?id=${index}"
-        class="detail-button">
-        詳細を見る →
-      </a>
-    `;
+    <p>🎆 ${firework.fireworks}</p>
 
-    container.appendChild(card);
-  });
+    <a
+      href="detail.html?id=${originalIndex}"
+      class="detail-button">
+      詳細を見る →
+    </a>
+  `;
+
+  container.appendChild(card);
+});
 }
 
 
