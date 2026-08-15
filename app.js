@@ -4,13 +4,14 @@ const fireworks = [
     name: "十和田市夏まつり 第69回花火大会",
     date: "2026-08-14",
     prefecture: "青森県",
-    location: "十和田市中央公園緑地・陸上競技場",
+    location: "中央公園緑地・陸上競技場",
     time: "19:10〜",
     fireworks: "約2,500発",
     access: "十和田市中心部からアクセス",
-    parking: "会場周辺への路上駐車は禁止",
-    seats: "陸上競技場西側観覧席など",
-    weather: "悪天候時は8月15日または17日に延期"
+    parking: "会場周辺は交通規制あり。路上駐車は禁止",
+    seats: "観覧席あり",
+    weather: "荒天時は8月15日または17日等へ延期",
+    officialUrl: "https://hanabi-towada.info/"
   },
 
   {
@@ -18,12 +19,13 @@ const fireworks = [
     date: "2026-08-14",
     prefecture: "秋田県",
     location: "OGAマリンパーク",
-    time: "19:30〜21:00予定",
+    time: "19:30〜",
     fireworks: "非公表",
     access: "JR男鹿駅から徒歩約10分",
-    parking: "臨時有料駐車場あり",
-    seats: "協賛券・事前予約席あり",
-    weather: "荒天時は翌日に順延"
+    parking: "臨時駐車場あり",
+    seats: "協賛席・観覧席あり",
+    weather: "荒天時は公式発表を確認",
+    officialUrl: "https://oganavi.com/hanabi/"
   },
 
   {
@@ -36,20 +38,22 @@ const fireworks = [
     access: "JR木更津駅西口から徒歩約10分",
     parking: "臨時駐車場あり",
     seats: "有料観覧席あり",
-    weather: "順延なし・荒天時は中止"
+    weather: "順延なし",
+    officialUrl: "https://www.city.kisarazu.lg.jp/event/omatsuri_moyoshi/kisarazuminatomatsuri/14590.html"
   },
 
   {
     name: "第33回赤川花火大会",
     date: "2026-08-15",
     prefecture: "山形県",
-    location: "赤川河川敷（三川橋〜羽黒橋）",
+    location: "赤川河川敷",
     time: "19:15〜",
     fireworks: "非公表",
     access: "JR鶴岡駅周辺から会場へアクセス",
-    parking: "会場周辺の交通規制あり",
+    parking: "会場周辺は交通規制あり",
     seats: "有料観覧席あり",
-    weather: "荒天時は順延なし"
+    weather: "荒天時は公式発表を確認",
+    officialUrl: "https://akagawahanabi.com/"
   },
 
   {
@@ -60,9 +64,10 @@ const fireworks = [
     time: "19:00〜予定",
     fireworks: "非公開",
     access: "JR上諏訪駅から徒歩圏内",
-    parking: "大会専用の交通・駐車場情報を公式サイトで確認",
+    parking: "大会公式の交通・駐車場情報を確認",
     seats: "有料チケットあり",
-    weather: "雨天決行"
+    weather: "雨天決行",
+    officialUrl: "https://suwako-hanabi.com/kojyou/overview/"
   },
 
   {
@@ -73,22 +78,24 @@ const fireworks = [
     time: "19:30〜20:30予定",
     fireworks: "約16,000発",
     access: "JR福山駅からアクセス",
-    parking: "会場周辺の駐車場は限りあり。公共交通機関推奨",
-    seats: "無料観覧エリアあり",
-    weather: "荒天時は中止・順延なし"
+    parking: "会場周辺の駐車場は限りあり",
+    seats: "観覧エリアあり",
+    weather: "荒天時は中止・順延なし",
+    officialUrl: "https://www.fukuyama-natsumatsuri.jp/"
   },
 
   {
     name: "第56回八幡浜みなと花火大会",
     date: "2026-08-15",
     prefecture: "愛媛県",
-    location: "八幡浜港・道の駅みなとオアシス八幡浜みなっと周辺",
+    location: "八幡浜港周辺",
     time: "20:00〜21:00",
     fireworks: "約3,500発",
-    access: "JR八幡浜駅から徒歩約20分",
-    parking: "無料臨時駐車場あり",
-    seats: "無料観覧・有料席情報は公式情報を確認",
-    weather: "荒天時は8月16日に延期"
+    access: "JR八幡浜駅からアクセス",
+    parking: "臨時駐車場等は公式情報を確認",
+    seats: "観覧エリアあり",
+    weather: "荒天時は公式発表を確認",
+    officialUrl: "https://www.city.yawatahama.ehime.jp/"
   },
 
   {
@@ -99,9 +106,10 @@ const fireworks = [
     time: "19:30〜",
     fireworks: "約10,000発",
     access: "JR敦賀駅からコミュニティバス約12〜18分",
-    parking: "臨時駐車場あり・一部予約制",
+    parking: "臨時駐車場あり",
     seats: "有料観覧席あり",
-    weather: "荒天中止・小雨決行"
+    weather: "荒天中止・小雨決行",
+    officialUrl: "https://tsuruga-kanko.jp/event/tsurugahanabi/"
   },
 
   {
@@ -112,9 +120,10 @@ const fireworks = [
     time: "19:40〜20:30予定",
     fireworks: "約10,000発",
     access: "JR川内駅から徒歩約15分",
-    parking: "市内に駐車場あり。公共交通機関推奨",
-    seats: "スペシャル観覧席あり",
-    weather: "荒天時は8月23日に延期"
+    parking: "臨時駐車場等は公式情報を確認",
+    seats: "観覧席あり",
+    weather: "荒天時は公式発表を確認",
+    officialUrl: "https://satsumasendai.gr.jp/events/42156/"
   },
 
   {
@@ -122,12 +131,13 @@ const fireworks = [
     date: "2026-08-16",
     prefecture: "京都府",
     location: "島崎公園・宮津湾",
-    time: "19:50〜20:35",
+    time: "19:50〜20:30頃",
     fireworks: "非公表",
     access: "京都丹後鉄道宮津駅から徒歩約10分",
-    parking: "公式臨時駐車場925台・有料・事前予約制",
-    seats: "観覧場所あり",
-    weather: "気象状況により変更の場合あり"
+    parking: "公式臨時駐車場あり・事前予約制",
+    seats: "有料観覧席あり",
+    weather: "荒天時は公式発表を確認",
+    officialUrl: "https://miyazu-cci.or.jp/hanabi/"
   },
 
   {
@@ -138,22 +148,24 @@ const fireworks = [
     time: "19:40〜20:40",
     fireworks: "非公表",
     access: "函館市電・湯の川周辺からアクセス",
-    parking: "会場周辺は交通規制あり",
+    parking: "会場周辺の交通規制あり",
     seats: "有料特別観覧席あり",
-    weather: "当日の実施可否を公式サイトで発表"
+    weather: "公式発表を確認",
+    officialUrl: "https://hakodate-yunokawa.jp/fireworks/"
   },
 
   {
     name: "FIREWORKS illusion いわみざわ公園花火大会2026",
     date: "2026-08-22",
     prefecture: "北海道",
-    location: "北海道グリーンランド遊園地",
+    location: "北海道グリーンランド",
     time: "20:00〜20:30予定",
     fireworks: "約6,000発",
     access: "JR岩見沢駅からバス約21分",
-    parking: "駐車場あり・1台1,000円",
+    parking: "駐車場あり",
     seats: "遊園地入園料が必要",
-    weather: "荒天時は8月23日に延期"
+    weather: "荒天時は公式発表を確認",
+    officialUrl: "https://www.h-greenland.com/"
   },
 
   {
@@ -163,10 +175,11 @@ const fireworks = [
     location: "砂沼南岸・砂沼湖上",
     time: "20:00〜20:30",
     fireworks: "約3,000発",
-    access: "砂沼周辺へ公共交通機関・車でアクセス",
+    access: "砂沼周辺",
     parking: "周辺駐車場あり",
     seats: "観覧エリアあり",
-    weather: "雨天決行・荒天順延（8月23日）"
+    weather: "荒天時は8月23日に順延",
+    officialUrl: "https://www.city.shimotsuma.lg.jp/"
   },
 
   {
@@ -177,35 +190,38 @@ const fireworks = [
     time: "19:30〜20:30",
     fireworks: "約3,000発",
     access: "JR勝田駅から徒歩約20分",
-    parking: "会場周辺の交通規制あり",
+    parking: "会場周辺は交通規制あり",
     seats: "無料",
-    weather: "荒天時は8月23日に延期"
+    weather: "荒天時は8月23日に延期",
+    officialUrl: "https://www.hitachinaka-fes.jp/"
   },
 
   {
     name: "朝来市山東夏祭り",
     date: "2026-08-22",
     prefecture: "兵庫県",
-    location: "与布土川沿い右岸井口橋周辺",
+    location: "与布土川沿い",
     time: "19:30〜20:00",
     fireworks: "約1,400発",
     access: "JR梁瀬駅から徒歩約15分",
-    parking: "無料駐車場約1,000台・無料シャトルバスあり",
+    parking: "無料駐車場あり・無料シャトルバスあり",
     seats: "有料観覧席あり",
-    weather: "雨天決行・荒天時は8月23日に順延"
+    weather: "荒天時は8月23日に順延",
+    officialUrl: "https://www.city.asago.hyogo.jp/"
   },
 
   {
     name: "第98回全国花火競技大会「大曲の花火」",
     date: "2026-08-29",
     prefecture: "秋田県",
-    location: "大仙市大曲雄物川河畔",
-    time: "詳細は公式プログラムを確認",
-    fireworks: "非公表",
-    access: "JR大曲駅から会場へアクセス",
-    parking: "公式駐車場情報を確認",
-    seats: "有料観覧席あり",
-    weather: "公式発表を確認"
+    location: "「大曲の花火」公園",
+    time: "17:10〜18:00（昼）19:00〜21:30（夜）",
+    fireworks: "約18,000発",
+    access: "JR大曲駅から徒歩約30分",
+    parking: "約6,000台の駐車場あり",
+    seats: "全席有料",
+    weather: "荒天延期",
+    officialUrl: "https://www.omagari-hanabi.com/"
   },
 
   {
@@ -215,23 +231,25 @@ const fireworks = [
     location: "小木港周辺",
     time: "詳細は公式情報を確認",
     fireworks: "約6,000発",
-    access: "小木港から車で約1分",
-    parking: "駐車場あり",
-    seats: "観覧場所あり",
-    weather: "公式情報を確認"
+    access: "小木港周辺",
+    parking: "臨時駐車場あり",
+    seats: "観覧エリアあり",
+    weather: "公式発表を確認",
+    officialUrl: "https://www.visitsado.com/"
   },
 
   {
     name: "第39回信州上田大花火大会",
     date: "2026-08-29",
     prefecture: "長野県",
-    location: "千曲川河川敷（常田新橋下流）",
+    location: "千曲川河川敷",
     time: "19:00〜20:30予定",
     fireworks: "約8,000発",
-    access: "JR・北陸新幹線上田駅から徒歩約5分",
-    parking: "駅周辺などの有料駐車場あり",
+    access: "JR上田駅から徒歩約5分",
+    parking: "駅周辺の有料駐車場を利用",
     seats: "有料席あり",
-    weather: "荒天時は中止"
+    weather: "荒天時は公式発表を確認",
+    officialUrl: "https://ueda-kanko.or.jp/"
   },
 
   {
@@ -241,10 +259,11 @@ const fireworks = [
     location: "モエレ沼公園",
     time: "19:15〜20:15予定",
     fireworks: "非公表",
-    access: "札幌市内から公共交通機関・シャトルバス等",
+    access: "札幌駅からシャトルバス等",
     parking: "公式案内を確認",
     seats: "全席有料",
-    weather: "公式情報を確認"
+    weather: "公式発表を確認",
+    officialUrl: "https://www.moere.jp/"
   },
 
   {
@@ -255,25 +274,24 @@ const fireworks = [
     time: "詳細は公式情報を確認",
     fireworks: "非公表",
     access: "ひたちなか市阿字ヶ浦海岸",
-    parking: "周辺駐車場を利用",
-    seats: "観覧場所あり",
-    weather: "公式情報を確認"
+    parking: "周辺駐車場あり",
+    seats: "観覧エリアあり",
+    weather: "公式発表を確認",
+    officialUrl: "https://visit.ibarakiguide.jp/"
   }
 
 ];
 
 
-// ========================================
+// ================================
 // 一覧ページ
-// ========================================
+// ================================
 
 const container = document.getElementById("fireworks-list");
 
 function displayFireworks(list) {
 
-  if (!container) {
-    return;
-  }
+  if (!container) return;
 
   container.innerHTML = "";
 
@@ -306,16 +324,16 @@ function displayFireworks(list) {
 }
 
 
-// 都道府県検索
+// ================================
+// 都道府県フィルター
+// ================================
 
 function filterFireworks() {
 
   const select =
     document.getElementById("prefecture-filter");
 
-  if (!select) {
-    return;
-  }
+  if (!select) return;
 
   const prefecture = select.value;
 
@@ -330,15 +348,12 @@ function filterFireworks() {
   displayFireworks(filtered);
 }
 
-
-// 一覧ページを表示
-
 displayFireworks(fireworks);
 
 
-// ========================================
+// ================================
 // 詳細ページ
-// ========================================
+// ================================
 
 const detailContainer =
   document.getElementById("firework-detail");
@@ -362,15 +377,11 @@ if (detailContainer) {
 
       <div class="detail-card">
 
-        <h2>
-          🎆 ${firework.name}
-        </h2>
+        <h2>🎆 ${firework.name}</h2>
 
         <div class="detail-item">
           <span>📅 開催日</span>
-          <strong>
-            ${firework.date}
-          </strong>
+          <strong>${firework.date}</strong>
         </div>
 
         <div class="detail-item">
@@ -383,60 +394,43 @@ if (detailContainer) {
 
         <div class="detail-item">
           <span>🕐 開催時間</span>
-          <strong>
-            ${firework.time}
-          </strong>
+          <strong>${firework.time}</strong>
         </div>
 
         <div class="detail-item">
           <span>🎆 打ち上げ数</span>
-          <strong>
-            ${firework.fireworks}
-          </strong>
+          <strong>${firework.fireworks}</strong>
         </div>
 
         <div class="detail-item">
           <span>🚗 アクセス</span>
-          <strong>
-            ${firework.access}
-          </strong>
+          <strong>${firework.access}</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>🅿️ 駐車場</span>
+          <strong>${firework.parking}</strong>
         </div>
 
         <div class="detail-item">
           <span>🎫 有料席</span>
-          <strong>
-            ${firework.seats}
-          </strong>
+          <strong>${firework.seats}</strong>
         </div>
 
         <div class="detail-item">
           <span>🌧️ 雨天時</span>
-          <strong>
-            ${firework.weather}
-          </strong>
+          <strong>${firework.weather}</strong>
         </div>
 
-        ${firework.officialUrl ? `
-
-  <div class="official-site">
-
-    <a
-
-      href="${firework.officialUrl}"
-
-      target="_blank"
-
-      rel="noopener noreferrer"
-
-      class="official-button">
-
-      🔗 公式サイトを見る →
-
-    </a>
-
-  </div>
-
-` : ""}
+        <div class="official-site">
+          <a
+            href="${firework.officialUrl}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="official-button">
+            🔗 公式サイトを見る →
+          </a>
+        </div>
 
       </div>
 
@@ -445,17 +439,10 @@ if (detailContainer) {
   } else {
 
     detailContainer.innerHTML = `
-
       <div class="detail-card">
-
         <h2>花火大会が見つかりません</h2>
-
-        <p>
-          花火大会の情報を取得できませんでした。
-        </p>
-
+        <p>指定された花火大会の情報が見つかりませんでした。</p>
       </div>
-
     `;
   }
 }
