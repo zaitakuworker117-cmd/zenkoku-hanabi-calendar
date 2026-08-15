@@ -256,3 +256,22 @@ footer {
 #search-input:focus {
   box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.35);
 }
+
+.filter-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0 20px;
+}
+
+.filter-area button {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.filter-area button:hover {
+  opacity: 0.8;
+}
