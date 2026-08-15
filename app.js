@@ -446,3 +446,44 @@ if (detailContainer) {
     `;
   }
 }
+
+// ================================
+// 花火大会検索
+// ================================
+
+const searchInput =
+  document.getElementById("search-input");
+
+if (searchInput) {
+
+  searchInput.addEventListener("input", function () {
+
+    const keyword =
+      searchInput.value
+        .trim()
+        .toLowerCase();
+
+    const filtered =
+      fireworks.filter(firework => {
+
+        return (
+          firework.name
+            .toLowerCase()
+            .includes(keyword)
+          ||
+          firework.prefecture
+            .toLowerCase()
+            .includes(keyword)
+          ||
+          firework.location
+            .toLowerCase()
+            .includes(keyword)
+        );
+
+      });
+
+    displayFireworks(filtered);
+
+  });
+
+}
