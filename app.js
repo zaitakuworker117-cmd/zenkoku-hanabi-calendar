@@ -490,3 +490,54 @@ if (searchInput) {
   });
 
 }
+
+
+// ================================
+// 開催時期フィルター
+// ================================
+
+function filterByPeriod(type) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  let filtered = fireworks;
+
+  if (type === "today") {
+    filtered = fireworks.filter(firework => {
+      const date = new Date(firework.date);
+      date.setHours(0, 0, 0, 0);
+      return date.getTime() === today.getTime();
+    });
+  }
+
+  if (type === "weekend") {
+    const day = today.getDay();
+    const saturday = new Date(today);
+    saturday.setDate(
+      today.getDate() + (6 - day)
+    );
+
+    saturday.setHours(0, 0, 0, 0);
+    const sunday = new Date(saturday);
+    sunday.setDate(
+      saturday.getDate() + 1
+    );
+    filtered = fireworks.filter(firework => {
+      const date = new Date(firework.date);
+      date.setHours(0, 0, 0, 0);
+      return date >= saturday && date <= sunday;
+    });
+  }
+
+  if (type === "month") {
+    filtered = fireworks.filter(firework => {
+      const date = new Date(firework.date);
+      return (
+        date.getFullYear() === today.getFullYear()
+        &&
+        date.getMonth() === today.getMonth()
+      );
+    });
+  }
+
+  displayFireworks(filtered);
+}
