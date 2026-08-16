@@ -295,11 +295,16 @@ function displayFireworks(list) {
 
   container.innerHTML = "";
 
-list.forEach((firework) => {
+  // 開催日の早い順に並べ替え
+  const sortedList = [...list].sort(
+    (a, b) => new Date(a.date) - new Date(b.date)
+  );
 
-  const card = document.createElement("div");
+  sortedList.forEach((firework) => {
 
-  card.className = "firework-card";
+    const card = document.createElement("div");
+
+    card.className = "firework-card";
 
   // 元のfireworks配列での位置を取得
   const originalIndex = fireworks.indexOf(firework);
