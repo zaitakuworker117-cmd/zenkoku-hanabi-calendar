@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/</loc>
@@ -9,7 +8,102 @@
   </url>
 
   <url>
-    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html</loc>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=0</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=1</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=2</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=3</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=4</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=5</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=6</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=7</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=8</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=9</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=10</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=11</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=12</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=13</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=14</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=15</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=16</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=17</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=18</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zaitakuworker117-cmd.github.io/zenkoku-hanabi-calendar/detail.html?id=19</loc>
     <priority>0.8</priority>
   </url>
 
