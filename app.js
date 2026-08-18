@@ -423,6 +423,50 @@ const firework =
 
     }
 
+    // ================================
+    // Google向け構造化データ（JSON-LD）
+    // ================================
+
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Event",
+
+      "name": firework.name,
+
+　　　　"startDate": firework.date,
+
+      "location": {
+        "@type": "Place",
+        "name": firework.location,
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": firework.prefecture,
+          "addressCountry": "JP"
+        }
+      },
+
+      "description":
+        `${firework.name}の2026年開催情報。` +
+        `開催日：${firework.date}。` +
+        `会場：${firework.location}。` +
+        `打ち上げ数：${firework.fireworks}。` +
+        `アクセス：${firework.access}。`,
+
+      "url": window.location.href,
+
+      "sameAs": firework.officialUrl
+    };
+
+    const script =
+      document.createElement("script");
+
+    script.type = "application/ld+json";
+
+    script.textContent =
+      JSON.stringify(structuredData);
+
+    document.head.appendChild(script);
+
     detailContainer.innerHTML = `
 
       <div class="detail-card">
