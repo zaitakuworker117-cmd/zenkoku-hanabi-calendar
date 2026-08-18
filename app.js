@@ -570,14 +570,84 @@ function filterByPeriod(type) {
 }
 
 // ================================
+// 開催日ボタンを自動生成
+// ================================
+
+function createDateFilterButtons() {
+
+  const container =
+    document.getElementById("date-filter-buttons");
+
+  if (!container) return;
+
+  // 登録されている開催日を取得
+  const dates = [...new Set(
+    fireworks.map(firework => firework.date)
+  )];
+
+  // 日付順に並べる
+  dates.sort(
+    (a, b) => new Date(a) - new Date(b)
+  );
+
+  container.innerHTML = "";
+
+  dates.forEach(date => {
+
+    const button =
+      document.createElement("button");
+
+    const dateObject =
+      new Date(date + "T00:00:00");
+
+    const month =
+      dateObject.getMonth() + 1;
+
+    const day =
+      dateObject.getDate();
+
+    const weekday =
+      ["日", "月", "火", "水", "木", "金", "土"]
+      [dateObject.getDay()];
+
+    button.textContent =
+      `${month}月${day}日（${weekday}）`;
+
+    button.onclick = function () {
+      filterByDate(date);
+    };
+
+    container.appendChild(button);
+  });
+
+  // 「すべて表示」ボタン
+  const allButton =
+    document.createElement("button");
+
+  allButton.textContent = "すべて表示";
+
+  allButton.onclick = function () {
+    displayFireworks(fireworks);
+  };
+
+  container.appendChild(allButton);
+}
+
+
+// ================================
 // 開催日でフィルター
 // ================================
 
 function filterByDate(date) {
 
-  const filtered = fireworks.filter(
-    firework => firework.date === date
-  );
+  const filtered =
+    fireworks.filter(
+      firework => firework.date === date
+    );
 
   displayFireworks(filtered);
 }
+
+
+// 開催日ボタンを作成
+createDateFilterButtons();
