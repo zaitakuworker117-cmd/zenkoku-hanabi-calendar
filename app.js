@@ -568,3 +568,16 @@ function filterByPeriod(type) {
 
   displayFireworks(filtered);
 }
+
+// ================================
+// 開催日でフィルター
+// ================================
+
+function filterByDate(date) {
+
+  const filtered = fireworks.filter(
+    firework => firework.date === date
+  );
+
+  displayFireworks(filtered);
+}
