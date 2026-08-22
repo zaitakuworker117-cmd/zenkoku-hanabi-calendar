@@ -490,6 +490,12 @@ const firework =
     detailContainer.innerHTML = `
 
       <div class="detail-card">
+      
+    <img
+      src="assets/hanabi/${firework.image}"
+      alt="${firework.name}"
+      class="hanabi-image"
+    >
 
         <h2>🎆 ${firework.name}</h2>
 
