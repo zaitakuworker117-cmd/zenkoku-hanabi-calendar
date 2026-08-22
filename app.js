@@ -3,6 +3,7 @@ const fireworks = [
   {
     name: "十和田市夏まつり 第69回花火大会",
     slug: "towada",
+    image: "towada.jpg",
     date: "2026-08-14",
     prefecture: "青森県",
     location: "中央公園緑地・陸上競技場",
@@ -18,6 +19,7 @@ const fireworks = [
   {
     name: "第22回 男鹿日本海花火",
     slug: "oga",
+    image: "oga.jpg",
     date: "2026-08-14",
     prefecture: "秋田県",
     location: "OGAマリンパーク",
@@ -33,6 +35,7 @@ const fireworks = [
   {
     name: "第79回木更津港まつり花火大会",
     slug: "kisarazu",
+    image: "kisarazu.jpg",
     date: "2026-08-15",
     prefecture: "千葉県",
     location: "木更津港内港",
@@ -48,6 +51,7 @@ const fireworks = [
   {
     name: "第33回赤川花火大会",
     slug: "akagawa",
+    image: "akagawa.jpg",
     date: "2026-08-15",
     prefecture: "山形県",
     location: "赤川河川敷",
@@ -63,6 +67,7 @@ const fireworks = [
   {
     name: "第78回諏訪湖祭湖上花火大会",
     slug: "suwako",
+    image: "suwako.jpg",
     date: "2026-08-15",
     prefecture: "長野県",
     location: "諏訪市湖畔公園前 諏訪湖上",
@@ -78,6 +83,7 @@ const fireworks = [
   {
     name: "あしだ川花火大会",
     slug: "ashidagawa",
+    image: "ashidagawa.jpg",
     date: "2026-08-15",
     prefecture: "広島県",
     location: "芦田川大橋上流",
@@ -93,6 +99,7 @@ const fireworks = [
   {
     name: "第56回八幡浜みなと花火大会",
     slug: "yawatahama",
+    image: "yawatahama.jpg",
     date: "2026-08-15",
     prefecture: "愛媛県",
     location: "八幡浜港周辺",
@@ -108,6 +115,7 @@ const fireworks = [
   {
     name: "第77回とうろう流しと大花火大会",
     slug: "tsuruga",
+    image: "tsuruga.jpg",
     date: "2026-08-16",
     prefecture: "福井県",
     location: "気比の松原",
@@ -123,6 +131,7 @@ const fireworks = [
   {
     name: "第68回川内川花火大会",
     slug: "sendai",
+    image: "sendai.jpg",
     date: "2026-08-16",
     prefecture: "鹿児島県",
     location: "川内川河川敷一帯",
@@ -138,6 +147,7 @@ const fireworks = [
   {
     name: "宮津燈籠流し花火大会",
     slug: "miyazu",
+    image: "miyazu.jpg",
     date: "2026-08-16",
     prefecture: "京都府",
     location: "島崎公園・宮津湾",
@@ -153,6 +163,7 @@ const fireworks = [
   {
     name: "第61回函館湯の川温泉花火大会",
     slug: "hakodate",
+    image: "hakodate.jpg",
     date: "2026-08-22",
     prefecture: "北海道",
     location: "松倉川下流",
@@ -168,6 +179,7 @@ const fireworks = [
   {
     name: "FIREWORKS illusion いわみざわ公園花火大会2026",
     slug: "iwamizawa",
+    image: "iwamizawa.jpg",
     date: "2026-08-22",
     prefecture: "北海道",
     location: "北海道グリーンランド",
@@ -183,6 +195,7 @@ const fireworks = [
   {
     name: "下妻まつり2026",
     slug: "shimotsuma",
+    image: "shimotsuma.jpg",
     date: "2026-08-22",
     prefecture: "茨城県",
     location: "砂沼南岸・砂沼湖上",
@@ -198,6 +211,7 @@ const fireworks = [
   {
     name: "第32回ひたちなか祭り花火大会",
     slug: "hitachinaka",
+    image: "hitachinaka.jpg",
     date: "2026-08-22",
     prefecture: "茨城県",
     location: "陸上自衛隊勝田駐屯地",
@@ -213,6 +227,7 @@ const fireworks = [
   {
     name: "朝来市山東夏祭り",
     slug: "asago",
+    image: "asago.jpg",
     date: "2026-08-22",
     prefecture: "兵庫県",
     location: "与布土川沿い",
@@ -228,6 +243,7 @@ const fireworks = [
   {
     name: "第98回全国花火競技大会「大曲の花火」",
     slug: "omagari",
+    image: "omagari.jpg",
     date: "2026-08-29",
     prefecture: "秋田県",
     location: "「大曲の花火」公園",
@@ -243,6 +259,7 @@ const fireworks = [
   {
     name: "小木港祭り",
     slug: "ogi",
+    image: "ogi.jpg",
     date: "2026-08-29",
     prefecture: "新潟県",
     location: "小木港周辺",
@@ -258,6 +275,7 @@ const fireworks = [
   {
     name: "第39回信州上田大花火大会",
     slug: "ueda",
+    image: "ueda.jpg",
     date: "2026-08-29",
     prefecture: "長野県",
     location: "千曲川河川敷",
@@ -273,6 +291,7 @@ const fireworks = [
   {
     name: "北海道芸術花火2026",
     slug: "hokkaido-art",
+    image: "hokkaido-art.jpg",
     date: "2026-09-05",
     prefecture: "北海道",
     location: "モエレ沼公園",
@@ -288,6 +307,7 @@ const fireworks = [
   {
     name: "阿字ヶ浦海岸花火大会",
     slug: "ajigaura",
+    image: "ajigaura.jpg",
     date: "2026-08-15",
     prefecture: "茨城県",
     location: "阿字ヶ浦海岸",
