@@ -450,11 +450,14 @@ const firework =
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "Event",
-
+    
       "name": firework.name,
-
-　　　　"startDate": firework.date,
-
+    
+      "image":
+        `${window.location.origin}/zenkoku-hanabi-calendar/assets/hanabi/${firework.image}`,
+    
+      "startDate": firework.date,
+    
       "location": {
         "@type": "Place",
         "name": firework.location,
@@ -464,16 +467,16 @@ const firework =
           "addressCountry": "JP"
         }
       },
-
+    
       "description":
         `${firework.name}の2026年開催情報。` +
         `開催日：${firework.date}。` +
         `会場：${firework.location}。` +
         `打ち上げ数：${firework.fireworks}。` +
         `アクセス：${firework.access}。`,
-
+    
       "url": window.location.href,
-
+    
       "sameAs": firework.officialUrl
     };
 
