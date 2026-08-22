@@ -275,3 +275,17 @@ footer {
 .filter-area button:hover {
   opacity: 0.8;
 }
+
+/* =================================
+   花火大会詳細ページ画像
+================================= */
+
+.hanabi-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 12px;
+  object-fit: cover;
+}
